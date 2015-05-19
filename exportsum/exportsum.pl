@@ -39,6 +39,10 @@ reinterprete:
       $file = $1;
       $type = 2;
       print $_;
+    } elsif (/^\*\*\*\* CRYPTEDBINFILE:(\S+)/) {
+      $file = $1;
+      $type = 2;
+      print $_;
     } elsif (/^\*\*\*\* (.+) CONFIGURATION EXPORT/) {
       $type =3;
       print $_;
