@@ -35,11 +35,7 @@ reinterprete:
       $file = $1;
       $type = 1;
       print $_;
-    } elsif (/^\*\*\*\* BINFILE:(\S+)/) {
-      $file = $1;
-      $type = 2;
-      print $_;
-    } elsif (/^\*\*\*\* CRYPTEDBINFILE:(\S+)/) {
+    } elsif (/^\*\*\*\* (CRYPTED)?BINFILE:(\S+)/) {
       $file = $1;
       $type = 2;
       print $_;
